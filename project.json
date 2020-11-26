@@ -19,8 +19,8 @@
     {
       "serviceDocument": ".entities/EntitiesStore.json",
       "tenantName": "kinoorgDefault",
-      "namespace": "nu.mine.kino",
-      "uniqueReference": "giKJkL08VRfqPlINSqDaXgU6+DgSo0UCO/8VL8E0nkc="
+      "namespace": "StockWorkflow",
+      "uniqueReference": "J4RCOvaARU3ikbdTlHyev9JhIO+cflx8w2btul5+Vj8="
     }
   ],
   "schemaVersion": "4.0",
