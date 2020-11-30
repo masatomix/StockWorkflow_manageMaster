@@ -20,12 +20,12 @@
       "serviceDocument": ".entities/EntitiesStore.json",
       "tenantName": "kinoorgDefault",
       "namespace": "StockWorkflow",
-      "uniqueReference": "J4RCOvaARU3ikbdTlHyev9JhIO+cflx8w2btul5+Vj8="
+      "uniqueReference": "1kQ1RmbnLnWBnt7lM0qRQ1euZPbm0E4LknXO/n/kL4s="
     }
   ],
   "schemaVersion": "4.0",
   "studioVersion": "20.10.2.0",
-  "projectVersion": "1.0.2",
+  "projectVersion": "1.0.5",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
