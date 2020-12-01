@@ -18,7 +18,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2821,1513</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1402,1621</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="31">
@@ -92,16 +92,17 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: In this file all other process specific files will be invoked.  &#xA;If there are many decisions, a Flowchart should be used instead." DisplayName="Process" sap:VirtualizedContainerService.HintSize="1028,1314" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Description: In this file all other process specific files will be invoked.  &#xA;If there are many decisions, a Flowchart should be used instead." DisplayName="Process" sap:VirtualizedContainerService.HintSize="738,1516" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Initialization of input data and Open Applications" DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="986,125" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="Initialization of input data and Open Applications" DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="696,125" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -110,7 +111,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Actual Processing" DisplayName="Process" sap:VirtualizedContainerService.HintSize="986,850" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence sap2010:Annotation.AnnotationText="Actual Processing&#xD;&#xA;product: 商品名&#xD;&#xA;action:  追加 / 削除 / 直接指定 / それ以外&#xD;&#xA;count:  個数&#xD;&#xA;&#xD;&#xA;" DisplayName="Process" sap:VirtualizedContainerService.HintSize="696,1052" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -118,7 +119,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:CommentOut DisplayName="コメント アウト" sap:VirtualizedContainerService.HintSize="944,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut DisplayName="コメント アウト" sap:VirtualizedContainerService.HintSize="654,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
         <ui:CommentOut.Body>
           <Sequence sap:VirtualizedContainerService.HintSize="476,234" sap2010:WorkflowViewState.IdRef="Sequence_26">
             <sap:WorkflowViewStateService.ViewState>
@@ -190,7 +191,8 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
-      <Flowchart DisplayName="フローチャート" sap:VirtualizedContainerService.HintSize="944,636" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+      <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="654,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[String.Format(&quot;product: {0},action: {1},count: {2}&quot;,product,action,count)]" />
+      <Flowchart DisplayName="フローチャート" sap:VirtualizedContainerService.HintSize="654,636" sap2010:WorkflowViewState.IdRef="Flowchart_2">
         <Flowchart.Variables>
           <Variable x:TypeArguments="scg:IList(s:Stock)" Name="allResults" />
         </Flowchart.Variables>
@@ -201,11 +203,11 @@
             <av:Point x:Key="ShapeLocation">100,2.5</av:Point>
             <av:Size x:Key="ShapeSize">60,75</av:Size>
             <av:PointCollection x:Key="ConnectorLocation">160,40 190,40 190,28.25 245,28.25</av:PointCollection>
-            <x:Double x:Key="Width">910</x:Double>
+            <x:Double x:Key="Width">620</x:Double>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <Flowchart.StartNode>
-          <x:Reference>__ReferenceID4</x:Reference>
+          <x:Reference>__ReferenceID3</x:Reference>
         </Flowchart.StartNode>
         <FlowStep x:Name="__ReferenceID0">
           <sap:WorkflowViewStateService.ViewState>
@@ -214,16 +216,17 @@
               <av:Size x:Key="ShapeSize">200,66</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="increment" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_24">
+          <Sequence DisplayName="increment / decrement" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_24">
             <Sequence.Variables>
               <Variable x:TypeArguments="s:Stock" Name="updateData" />
+              <Variable x:TypeArguments="x:Decimal" Name="previousValue" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uda:QueryEntityRecords x:TypeArguments="s:Stock" TotalRecords="{x:Null}" ContinueOnError="False" DisplayName="エンティティ レコードにクエリを実行" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="341,221" sap2010:WorkflowViewState.IdRef="QueryEntityRecords`1_7" OutputRecords="[allResults]" Skip="0" SortAscending="True" SortByField="Id" TimeoutInMs="30000" Top="100">
+            <uda:QueryEntityRecords x:TypeArguments="s:Stock" TotalRecords="{x:Null}" ContinueOnError="False" DisplayName="エンティティ レコードにクエリを実行" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="569,221" sap2010:WorkflowViewState.IdRef="QueryEntityRecords`1_7" OutputRecords="[allResults]" Skip="0" SortAscending="True" SortByField="Id" TimeoutInMs="30000" Top="100">
               <uda:QueryEntityRecords.FilterArguments>
                 <uda:FilterArgument FilterActivityType="s:Stock">
                   <uda:FilterArgument.Filter>
@@ -246,7 +249,7 @@
                 </scg:List>
               </uda:QueryEntityRecords.FilterValues>
             </uda:QueryEntityRecords>
-            <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="341,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+            <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="569,60" sap2010:WorkflowViewState.IdRef="Assign_7">
               <Assign.To>
                 <OutArgument x:TypeArguments="s:Stock">[updateData]</OutArgument>
               </Assign.To>
@@ -254,16 +257,38 @@
                 <InArgument x:TypeArguments="s:Stock">[allResults(0)]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="341,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+            <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="569,60" sap2010:WorkflowViewState.IdRef="Assign_13">
               <Assign.To>
-                <OutArgument x:TypeArguments="s1:Nullable(x:Decimal)">[updateData.count]</OutArgument>
+                <OutArgument x:TypeArguments="x:Decimal">[previousValue]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="s1:Nullable(x:Decimal)">[updateData.count+count]</InArgument>
+                <InArgument x:TypeArguments="x:Decimal">[updateData.count.GetValueOrDefault]</InArgument>
               </Assign.Value>
             </Assign>
-            <uda:UpdateEntityRecord x:TypeArguments="s:Stock" ContinueOnError="False" DisplayName="エンティティ レコードを更新" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="341,220" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_3" InputEntity="[updateData]" OutputEntity="[updateData]" TimeoutInMs="30000" />
-            <ui:MultipleAssign DisplayName="複数代入" sap:VirtualizedContainerService.HintSize="341,98" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
+            <If Condition="[action.Equals(&quot;追加&quot;)]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="569,208" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="s1:Nullable(x:Decimal)">[updateData.count]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="s1:Nullable(x:Decimal)">[updateData.count+count]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </If.Then>
+              <If.Else>
+                <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="s1:Nullable(x:Decimal)">[updateData.count]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="s1:Nullable(x:Decimal)">[updateData.count - count]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </If.Else>
+            </If>
+            <uda:UpdateEntityRecord x:TypeArguments="s:Stock" ContinueOnError="False" DisplayName="エンティティ レコードを更新" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="569,220" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_3" InputEntity="[updateData]" OutputEntity="[updateData]" TimeoutInMs="30000" />
+            <ui:MultipleAssign DisplayName="複数代入" sap:VirtualizedContainerService.HintSize="569,98" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
@@ -271,7 +296,7 @@
                       <OutArgument x:TypeArguments="x:String">[resultStr]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[updateData.product.Name +" : "+updateData.count.ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[updateData.product.Name +" : "+previousValue.ToString +" → "+updateData.count.ToString]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
                 </scg:List>
@@ -279,41 +304,70 @@
             </ui:MultipleAssign>
           </Sequence>
         </FlowStep>
-        <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID4" DisplayName="フロースイッチ" Expression="[action]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_2">
+        <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID3" DisplayName="フロースイッチ" Expression="[action]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_2">
           <FlowSwitch.Default>
             <FlowStep x:Name="__ReferenceID1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">710,227</av:Point>
+                  <av:Point x:Key="ShapeLocation">420,227</av:Point>
                   <av:Size x:Key="ShapeSize">200,66</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="一覧表示" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_20">
+              <Sequence DisplayName="一覧表示" sap:VirtualizedContainerService.HintSize="769,791" sap2010:WorkflowViewState.IdRef="Sequence_20">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uda:QueryEntityRecords x:TypeArguments="s:Stock" TotalRecords="{x:Null}" ContinueOnError="False" DisplayName="エンティティ レコードにクエリを実行" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="430,221" sap2010:WorkflowViewState.IdRef="QueryEntityRecords`1_5" OutputRecords="[allResults]" Skip="0" SortAscending="True" SortByField="Seq" TimeoutInMs="30000" Top="100">
-                  <uda:QueryEntityRecords.FilterArguments>
-                    <uda:FilterArgument FilterActivityType="s:Stock">
-                      <uda:FilterArgument.Filter>
-                        <uda:GroupFilter Operator="and">
-                          <uda:GroupFilter.Filters>
-                            <scg:List x:TypeArguments="uda:SimpleFilter" Capacity="0" />
-                          </uda:GroupFilter.Filters>
-                          <uda:GroupFilter.Groups>
-                            <scg:List x:TypeArguments="uda:GroupFilter" Capacity="0" />
-                          </uda:GroupFilter.Groups>
-                        </uda:GroupFilter>
-                      </uda:FilterArgument.Filter>
-                    </uda:FilterArgument>
-                  </uda:QueryEntityRecords.FilterArguments>
-                  <uda:QueryEntityRecords.FilterValues>
-                    <scg:List x:TypeArguments="InArgument" Capacity="0" />
-                  </uda:QueryEntityRecords.FilterValues>
-                </uda:QueryEntityRecords>
-                <ui:ForEach x:TypeArguments="s:Stock" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="430,290" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[allResults]">
+                <If Condition="[String.IsNullOrEmpty(product)]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="727,369" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If.Then>
+                    <uda:QueryEntityRecords x:TypeArguments="s:Stock" TotalRecords="{x:Null}" ContinueOnError="False" DisplayName="エンティティ レコードにクエリを実行" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="341,221" sap2010:WorkflowViewState.IdRef="QueryEntityRecords`1_5" OutputRecords="[allResults]" Skip="0" SortAscending="True" SortByField="Seq" TimeoutInMs="30000" Top="100">
+                      <uda:QueryEntityRecords.FilterArguments>
+                        <uda:FilterArgument FilterActivityType="s:Stock">
+                          <uda:FilterArgument.Filter>
+                            <uda:GroupFilter Operator="and">
+                              <uda:GroupFilter.Filters>
+                                <scg:List x:TypeArguments="uda:SimpleFilter" Capacity="0" />
+                              </uda:GroupFilter.Filters>
+                              <uda:GroupFilter.Groups>
+                                <scg:List x:TypeArguments="uda:GroupFilter" Capacity="0" />
+                              </uda:GroupFilter.Groups>
+                            </uda:GroupFilter>
+                          </uda:FilterArgument.Filter>
+                        </uda:FilterArgument>
+                      </uda:QueryEntityRecords.FilterArguments>
+                      <uda:QueryEntityRecords.FilterValues>
+                        <scg:List x:TypeArguments="InArgument" Capacity="0" />
+                      </uda:QueryEntityRecords.FilterValues>
+                    </uda:QueryEntityRecords>
+                  </If.Then>
+                  <If.Else>
+                    <uda:QueryEntityRecords x:TypeArguments="s:Stock" TotalRecords="{x:Null}" ContinueOnError="False" DisplayName="エンティティ レコードにクエリを実行" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="341,221" sap2010:WorkflowViewState.IdRef="QueryEntityRecords`1_10" OutputRecords="[allResults]" Skip="0" SortAscending="True" SortByField="Seq" TimeoutInMs="30000" Top="100">
+                      <uda:QueryEntityRecords.FilterArguments>
+                        <uda:FilterArgument FilterActivityType="s:Stock">
+                          <uda:FilterArgument.Filter>
+                            <uda:GroupFilter Operator="and">
+                              <uda:GroupFilter.Filters>
+                                <scg:List x:TypeArguments="uda:SimpleFilter" Capacity="4">
+                                  <uda:SimpleFilter ExpressionValue="{x:Null}" FieldName="product.Name" FieldType="System.String" Operator="=" ValueIndex="0" />
+                                </scg:List>
+                              </uda:GroupFilter.Filters>
+                              <uda:GroupFilter.Groups>
+                                <scg:List x:TypeArguments="uda:GroupFilter" Capacity="0" />
+                              </uda:GroupFilter.Groups>
+                            </uda:GroupFilter>
+                          </uda:FilterArgument.Filter>
+                        </uda:FilterArgument>
+                      </uda:QueryEntityRecords.FilterArguments>
+                      <uda:QueryEntityRecords.FilterValues>
+                        <scg:List x:TypeArguments="InArgument" Capacity="4">
+                          <InArgument x:TypeArguments="x:String">[product]</InArgument>
+                        </scg:List>
+                      </uda:QueryEntityRecords.FilterValues>
+                    </uda:QueryEntityRecords>
+                  </If.Else>
+                </If>
+                <ui:ForEach x:TypeArguments="s:Stock" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="727,290" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[allResults]">
                   <ui:ForEach.Body>
                     <ActivityAction x:TypeArguments="s:Stock">
                       <ActivityAction.Argument>
@@ -346,95 +400,24 @@ String.Format("{0}, {2} コ ({1})",item.product.Name,  item.product.Url, item.co
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">245,6.5</av:Point>
               <av:Size x:Key="ShapeSize">70,87</av:Size>
-              <av:PointCollection x:Key="Default">315,28.25 810,28.25 810,227</av:PointCollection>
+              <av:PointCollection x:Key="Default">315,28.25 520,28.25 520,227</av:PointCollection>
               <av:PointCollection x:Key="追加Connector">262.5,93.5 262.5,123.5 100,123.5 100,227</av:PointCollection>
-              <av:PointCollection x:Key="削除Connector">315,71.75 340,71.75 340,227</av:PointCollection>
-              <av:PointCollection x:Key="直接指定Connector">315,50 560,50 560,227</av:PointCollection>
+              <av:PointCollection x:Key="削除Connector">280,93.5 280,163.04 100,163.04 100,227</av:PointCollection>
+              <av:PointCollection x:Key="直接指定Connector">315,50 340,50 340,197 310,197 310,227</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <x:Reference>__ReferenceID0<x:Key>追加</x:Key></x:Reference>
-          <FlowStep x:Key="削除" x:Name="__ReferenceID2">
+          <FlowStep x:Key="直接指定" x:Name="__ReferenceID2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <av:Point x:Key="ShapeLocation">240,227</av:Point>
-                <av:Size x:Key="ShapeSize">200,66</av:Size>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="decrement" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_25">
-              <Sequence.Variables>
-                <Variable x:TypeArguments="s:Stock" Name="updateData" />
-              </Sequence.Variables>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <uda:QueryEntityRecords x:TypeArguments="s:Stock" TotalRecords="{x:Null}" ContinueOnError="False" DisplayName="エンティティ レコードにクエリを実行" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="341,221" sap2010:WorkflowViewState.IdRef="QueryEntityRecords`1_8" OutputRecords="[allResults]" Skip="0" SortAscending="True" SortByField="Id" TimeoutInMs="30000" Top="100">
-                <uda:QueryEntityRecords.FilterArguments>
-                  <uda:FilterArgument FilterActivityType="s:Stock">
-                    <uda:FilterArgument.Filter>
-                      <uda:GroupFilter Operator="and">
-                        <uda:GroupFilter.Filters>
-                          <scg:List x:TypeArguments="uda:SimpleFilter" Capacity="4">
-                            <uda:SimpleFilter ExpressionValue="{x:Null}" FieldName="product.Name" FieldType="System.String" Operator="=" ValueIndex="0" />
-                          </scg:List>
-                        </uda:GroupFilter.Filters>
-                        <uda:GroupFilter.Groups>
-                          <scg:List x:TypeArguments="uda:GroupFilter" Capacity="0" />
-                        </uda:GroupFilter.Groups>
-                      </uda:GroupFilter>
-                    </uda:FilterArgument.Filter>
-                  </uda:FilterArgument>
-                </uda:QueryEntityRecords.FilterArguments>
-                <uda:QueryEntityRecords.FilterValues>
-                  <scg:List x:TypeArguments="InArgument" Capacity="4">
-                    <InArgument x:TypeArguments="x:String">[product]</InArgument>
-                  </scg:List>
-                </uda:QueryEntityRecords.FilterValues>
-              </uda:QueryEntityRecords>
-              <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="341,60" sap2010:WorkflowViewState.IdRef="Assign_9">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="s:Stock">[updateData]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="s:Stock">[allResults(0)]</InArgument>
-                </Assign.Value>
-              </Assign>
-              <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="341,60" sap2010:WorkflowViewState.IdRef="Assign_10">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="s1:Nullable(x:Decimal)">[updateData.count]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="s1:Nullable(x:Decimal)">[updateData.count-count]</InArgument>
-                </Assign.Value>
-              </Assign>
-              <uda:UpdateEntityRecord x:TypeArguments="s:Stock" ContinueOnError="False" DisplayName="エンティティ レコードを更新" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="341,220" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_4" InputEntity="[updateData]" OutputEntity="[updateData]" TimeoutInMs="30000" />
-              <ui:MultipleAssign DisplayName="複数代入" sap:VirtualizedContainerService.HintSize="341,98" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
-                <ui:MultipleAssign.AssignOperations>
-                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
-                      <ui:AssignOperation.To>
-                        <OutArgument x:TypeArguments="x:String">[resultStr]</OutArgument>
-                      </ui:AssignOperation.To>
-                      <ui:AssignOperation.Value>
-                        <InArgument x:TypeArguments="x:String">[updateData.product.Name +" : "+updateData.count.ToString]</InArgument>
-                      </ui:AssignOperation.Value>
-                    </ui:AssignOperation>
-                  </scg:List>
-                </ui:MultipleAssign.AssignOperations>
-              </ui:MultipleAssign>
-            </Sequence>
-          </FlowStep>
-          <FlowStep x:Key="直接指定" x:Name="__ReferenceID3">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <av:Point x:Key="ShapeLocation">460,227</av:Point>
+                <av:Point x:Key="ShapeLocation">210,227</av:Point>
                 <av:Size x:Key="ShapeSize">200,66</av:Size>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Sequence DisplayName="直接指定" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_27">
               <Sequence.Variables>
                 <Variable x:TypeArguments="s:Stock" Name="updateData" />
+                <Variable x:TypeArguments="x:Decimal" Name="previousValue" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -472,6 +455,14 @@ String.Format("{0}, {2} コ ({1})",item.product.Name,  item.product.Url, item.co
                   <InArgument x:TypeArguments="s:Stock">[allResults(0)]</InArgument>
                 </Assign.Value>
               </Assign>
+              <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="341,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Decimal">[previousValue]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Decimal">[updateData.count.GetValueOrDefault]</InArgument>
+                </Assign.Value>
+              </Assign>
               <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="341,60" sap2010:WorkflowViewState.IdRef="Assign_12">
                 <Assign.To>
                   <OutArgument x:TypeArguments="s1:Nullable(x:Decimal)">[updateData.count]</OutArgument>
@@ -489,7 +480,7 @@ String.Format("{0}, {2} コ ({1})",item.product.Name,  item.product.Url, item.co
                         <OutArgument x:TypeArguments="x:String">[resultStr]</OutArgument>
                       </ui:AssignOperation.To>
                       <ui:AssignOperation.Value>
-                        <InArgument x:TypeArguments="x:String">[updateData.product.Name +" : "+updateData.count.ToString]</InArgument>
+                        <InArgument x:TypeArguments="x:String">[updateData.product.Name +" : "+previousValue.ToString +" → "+updateData.count.ToString]</InArgument>
                       </ui:AssignOperation.Value>
                     </ui:AssignOperation>
                   </scg:List>
@@ -497,13 +488,100 @@ String.Format("{0}, {2} コ ({1})",item.product.Name,  item.product.Url, item.co
               </ui:MultipleAssign>
             </Sequence>
           </FlowStep>
+          <x:Reference>__ReferenceID0<x:Key>削除</x:Key></x:Reference>
         </FlowSwitch>
         <x:Reference>__ReferenceID1</x:Reference>
+        <FlowStep>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">0,324.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,51</av:Size>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+            <ui:CommentOut.Body>
+              <Sequence DisplayName="無視されたアクティビティ" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                <Sequence DisplayName="decrement" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="s:Stock" Name="updateData" />
+                    <Variable x:TypeArguments="x:Decimal" Name="previousValue" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uda:QueryEntityRecords x:TypeArguments="s:Stock" TotalRecords="{x:Null}" ContinueOnError="False" DisplayName="エンティティ レコードにクエリを実行" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="341,221" sap2010:WorkflowViewState.IdRef="QueryEntityRecords`1_8" OutputRecords="[allResults]" Skip="0" SortAscending="True" SortByField="Id" TimeoutInMs="30000" Top="100">
+                    <uda:QueryEntityRecords.FilterArguments>
+                      <uda:FilterArgument FilterActivityType="s:Stock">
+                        <uda:FilterArgument.Filter>
+                          <uda:GroupFilter Operator="and">
+                            <uda:GroupFilter.Filters>
+                              <scg:List x:TypeArguments="uda:SimpleFilter" Capacity="4">
+                                <uda:SimpleFilter ExpressionValue="{x:Null}" FieldName="product.Name" FieldType="System.String" Operator="=" ValueIndex="0" />
+                              </scg:List>
+                            </uda:GroupFilter.Filters>
+                            <uda:GroupFilter.Groups>
+                              <scg:List x:TypeArguments="uda:GroupFilter" Capacity="0" />
+                            </uda:GroupFilter.Groups>
+                          </uda:GroupFilter>
+                        </uda:FilterArgument.Filter>
+                      </uda:FilterArgument>
+                    </uda:QueryEntityRecords.FilterArguments>
+                    <uda:QueryEntityRecords.FilterValues>
+                      <scg:List x:TypeArguments="InArgument" Capacity="4">
+                        <InArgument x:TypeArguments="x:String">[product]</InArgument>
+                      </scg:List>
+                    </uda:QueryEntityRecords.FilterValues>
+                  </uda:QueryEntityRecords>
+                  <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="341,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="s:Stock">[updateData]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="s:Stock">[allResults(0)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="341,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Decimal">[previousValue]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Decimal">[updateData.count.GetValueOrDefault]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="341,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="s1:Nullable(x:Decimal)">[updateData.count]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="s1:Nullable(x:Decimal)">[updateData.count-count]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <uda:UpdateEntityRecord x:TypeArguments="s:Stock" ContinueOnError="False" DisplayName="エンティティ レコードを更新" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="341,220" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_4" InputEntity="[updateData]" OutputEntity="[updateData]" TimeoutInMs="30000" />
+                  <ui:MultipleAssign DisplayName="複数代入" sap:VirtualizedContainerService.HintSize="341,98" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
+                    <ui:MultipleAssign.AssignOperations>
+                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">[resultStr]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">[updateData.product.Name +" : "+previousValue.ToString +" → "+updateData.count.ToString]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                      </scg:List>
+                    </ui:MultipleAssign.AssignOperations>
+                  </ui:MultipleAssign>
+                </Sequence>
+              </Sequence>
+            </ui:CommentOut.Body>
+          </ui:CommentOut>
+        </FlowStep>
         <x:Reference>__ReferenceID2</x:Reference>
-        <x:Reference>__ReferenceID3</x:Reference>
       </Flowchart>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Writing output data, Close Applications, Send Email" DisplayName="End Process" sap:VirtualizedContainerService.HintSize="986,125" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence sap2010:Annotation.AnnotationText="Writing output data, Close Applications, Send Email" DisplayName="End Process" sap:VirtualizedContainerService.HintSize="696,125" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
