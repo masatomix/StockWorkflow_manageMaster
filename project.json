@@ -1,5 +1,5 @@
 {
-  "name": "StockWorkflow",
+  "name": "StockWorkflow_manageMaster",
   "description": "Stock Workflow powered by My Attended Framework",
   "main": "Main.xaml",
   "dependencies": {
@@ -20,12 +20,12 @@
       "serviceDocument": ".entities/EntitiesStore.json",
       "tenantName": "kinoorgDefault",
       "namespace": "StockWorkflow",
-      "uniqueReference": "1kQ1RmbnLnWBnt7lM0qRQ1euZPbm0E4LknXO/n/kL4s="
+      "uniqueReference": "f0FgnFjy9lfbqiKkU6mSS8m192JggHpY+aNdCIIk+y0="
     }
   ],
   "schemaVersion": "4.0",
   "studioVersion": "20.10.2.0",
-  "projectVersion": "1.0.9",
+  "projectVersion": "1.0.13",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
@@ -52,7 +52,7 @@
       ]
     },
     "fileInfoCollection": [],
-    "modernBehavior": false
+    "modernBehavior": true
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [

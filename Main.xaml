@@ -2,13 +2,12 @@
   <x:Members>
     <x:Property Name="product" Type="InArgument(x:String)" />
     <x:Property Name="action" Type="InArgument(x:String)" />
-    <x:Property Name="count" Type="InArgument(x:Int32)" />
     <x:Property Name="resultStr" Type="OutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1762,965</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>3082,1876</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -130,14 +129,11 @@
                 <InArgument x:TypeArguments="x:String" x:Key="product">
                   <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="product" />
                 </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="action">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="action" />
-                </InArgument>
                 <OutArgument x:TypeArguments="x:String" x:Key="resultStr">
                   <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="resultStr" />
                 </OutArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="count">
-                  <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="count" />
+                <InArgument x:TypeArguments="x:String" x:Key="action">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="action" />
                 </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
               <sap:WorkflowViewStateService.ViewState>
